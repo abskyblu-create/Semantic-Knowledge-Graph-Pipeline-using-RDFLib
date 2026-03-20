@@ -1,0 +1,92 @@
+[
+  {
+    "@id": "http://sample/Luke",
+    "http://sample/prop/hasEnemy": [
+      {
+        "@id": "http://sample/Vader"
+      }
+    ],
+    "http://sample/prop/hasFriend": [
+      {
+        "@id": "http://sample/HanSolo"
+      }
+    ],
+    "http://sample/prop/hasSister": [
+      {
+        "@id": "http://sample/Leia"
+      }
+    ],
+    "http://sample/prop/name": [
+      {
+        "@value": "Luke Skywalker"
+      }
+    ],
+    "http://sample/prop/playedBy": [
+      {
+        "@id": "http://sample/MarkHamill"
+      }
+    ]
+  },
+  {
+    "@id": "http://sample/Leia",
+    "http://sample/prop/hasBrother": [
+      {
+        "@id": "http://sample/Luke"
+      }
+    ],
+    "http://sample/prop/hasFriend": [
+      {
+        "@id": "http://sample/HanSolo"
+      }
+    ],
+    "http://sample/prop/name": [
+      {
+        "@value": "Leia"
+      }
+    ],
+    "http://sample/prop/playedBy": [
+      {
+        "@id": "http://sample/CarrieFisher"
+      }
+    ]
+  },
+  {
+    "@id": "http://sample/HanSolo",
+    "http://sample/prop/name": [
+      {
+        "@value": "Han Solo"
+      }
+    ],
+    "http://sample/prop/playedBy": [
+      {
+        "@id": "http://sample/HarrisonFord"
+      }
+    ]
+  },
+  {
+    "@id": "http://sample/Vader",
+    "http://sample/prop/isFatherOf": [
+      {
+        "@id": "http://sample/Luke"
+      }
+    ],
+    "http://sample/prop/name": [
+      {
+        "@value": "Darth Vader"
+      }
+    ],
+    "http://sample/prop/playedBy": [
+      {
+        "@id": "http://sample/DavidProwse"
+      }
+    ]
+  },
+  {
+    "@id": "http://sample/MarkHamill",
+    "http://sample/prop/age": [
+      {
+        "@value": "67"
+      }
+    ]
+  }
+]

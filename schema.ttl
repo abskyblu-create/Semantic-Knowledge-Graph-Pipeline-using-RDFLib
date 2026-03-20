@@ -1,0 +1,38 @@
+# semantic layer:
+
+
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix type: <http://sample/type/> .
+@prefix prop: <http://sample/prop/> .
+@prefix ex: <http://sample/> .
+
+type:Movie a rdfs:Class .
+type:Creature a rdfs:Class .
+type:Human rdfs:subClassOf type:Creature .
+type:Wookie rdfs:subClassOf type:Creature .
+type:Jedi rdfs:subClassOf type:Creature .
+type:Starship a rdfs:Class .
+
+prop:hasCharacter a rdf:Property ;
+    rdfs:domain type:Movie ;
+    rdfs:range type:Creature .
+
+prop:coPilotOf a rdf:Property ;
+    rdfs:domain type:Creature ;
+    rdfs:range type:Starship .
+
+prop:speed a rdf:Property ;
+    rdfs:domain type:Starship ;
+    rdfs:range rdfs:Literal .
+
+ex:SW4 a type:Movie .
+ex:Luke a type:Human , type:Jedi .
+ex:Yoda a type:Jedi .
+ex:Chewbacca a type:Wookie .
+
+ex:MillenniumFalcon a type:Starship ;
+    prop:speed "1.5"^^<http://www.w3.org/2001/XMLSchema#float> .
+
+ex:Chewbacca prop:coPilotOf ex:MillenniumFalcon .
+ex:SW4 prop:hasCharacter ex:Luke , ex:HanSolo , ex:Leia , ex:Vader .

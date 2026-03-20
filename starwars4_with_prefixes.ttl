@@ -1,0 +1,23 @@
+@prefix ex: <http://sample/> .
+@prefix ns1: <http://sample/prop/> .
+
+ex:Leia ns1:hasBrother ex:Luke ;
+    ns1:hasFriend ex:HanSolo ;
+    ns1:name "Leia" ;
+    ns1:playedBy ex:CarrieFisher .
+
+ex:MarkHamill ns1:age "67" .
+
+ex:Vader ns1:isFatherOf ex:Luke ;
+    ns1:name "Darth Vader" ;
+    ns1:playedBy ex:DavidProwse .
+
+ex:HanSolo ns1:name "Han Solo" ;
+    ns1:playedBy ex:HarrisonFord .
+
+ex:Luke ns1:hasEnemy ex:Vader ;
+    ns1:hasFriend ex:HanSolo ;
+    ns1:hasSister ex:Leia ;
+    ns1:name "Luke Skywalker" ;
+    ns1:playedBy ex:MarkHamill .
+

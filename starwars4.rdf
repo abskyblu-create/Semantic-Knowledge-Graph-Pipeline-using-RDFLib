@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:ns1="http://sample/prop/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+>
+  <rdf:Description rdf:about="http://sample/Vader">
+    <ns1:name>Darth Vader</ns1:name>
+    <ns1:playedBy rdf:resource="http://sample/DavidProwse"/>
+    <ns1:isFatherOf rdf:resource="http://sample/Luke"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sample/HanSolo">
+    <ns1:name>Han Solo</ns1:name>
+    <ns1:playedBy rdf:resource="http://sample/HarrisonFord"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sample/Leia">
+    <ns1:name>Leia</ns1:name>
+    <ns1:playedBy rdf:resource="http://sample/CarrieFisher"/>
+    <ns1:hasFriend rdf:resource="http://sample/HanSolo"/>
+    <ns1:hasBrother rdf:resource="http://sample/Luke"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sample/Luke">
+    <ns1:name>Luke Skywalker</ns1:name>
+    <ns1:playedBy rdf:resource="http://sample/MarkHamill"/>
+    <ns1:hasFriend rdf:resource="http://sample/HanSolo"/>
+    <ns1:hasEnemy rdf:resource="http://sample/Vader"/>
+    <ns1:hasSister rdf:resource="http://sample/Leia"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sample/MarkHamill">
+    <ns1:age>67</ns1:age>
+  </rdf:Description>
+</rdf:RDF>

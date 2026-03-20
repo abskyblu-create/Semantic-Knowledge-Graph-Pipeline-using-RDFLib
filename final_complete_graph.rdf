@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:ns1="http://sample/prop/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <rdf:Description rdf:about="http://sample/Yoda">
+    <rdf:type rdf:resource="http://sample/type/Jedi"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sample/Vader">
+    <ns1:isFatherOf rdf:resource="http://sample/Luke"/>
+    <ns1:isFatherOf rdf:resource="http://sample/Leia"/>
+    <ns1:name>Darth Vader</ns1:name>
+    <ns1:playedBy rdf:resource="http://sample/DavidProwse"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sample/prop/coPilotOf">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:domain rdf:resource="http://sample/type/Creature"/>
+    <rdfs:range rdf:resource="http://sample/type/Starship"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sample/SW4">
+    <rdf:type rdf:resource="http://sample/type/Movie"/>
+    <ns1:hasCharacter rdf:resource="http://sample/Luke"/>
+    <ns1:hasCharacter rdf:resource="http://sample/HanSolo"/>
+    <ns1:hasCharacter rdf:resource="http://sample/Leia"/>
+    <ns1:hasCharacter rdf:resource="http://sample/Vader"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sample/Leia">
+    <ns1:hasBrother rdf:resource="http://sample/Luke"/>
+    <ns1:hasFriend rdf:resource="http://sample/HanSolo"/>
+    <ns1:hasFriend rdf:resource="http://sample/Luke"/>
+    <ns1:name>Leia</ns1:name>
+    <ns1:playedBy rdf:resource="http://sample/CarrieFisher"/>
+    <ns1:hasEnemy rdf:resource="http://sample/Vader"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sample/type/Creature">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sample/Luke">
+    <rdf:type rdf:resource="http://sample/type/Human"/>
+    <rdf:type rdf:resource="http://sample/type/Jedi"/>
+    <ns1:hasEnemy rdf:resource="http://sample/Vader"/>
+    <ns1:hasFriend rdf:resource="http://sample/HanSolo"/>
+    <ns1:hasFriend rdf:resource="http://sample/Leia"/>
+    <ns1:hasSister rdf:resource="http://sample/Leia"/>
+    <ns1:name>Luke Skywalker</ns1:name>
+    <ns1:playedBy rdf:resource="http://sample/MarkHamill"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sample/HanSolo">
+    <ns1:name>Han Solo</ns1:name>
+    <ns1:playedBy rdf:resource="http://sample/HarrisonFord"/>
+    <ns1:hasFriend rdf:resource="http://sample/Leia"/>
+    <ns1:hasFriend rdf:resource="http://sample/Luke"/>
+    <ns1:hasEnemy rdf:resource="http://sample/Vader"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sample/type/Jedi">
+    <rdfs:subClassOf rdf:resource="http://sample/type/Creature"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sample/type/Movie">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sample/MillenniumFalcon">
+    <rdf:type rdf:resource="http://sample/type/Starship"/>
+    <ns1:speed rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.5</ns1:speed>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sample/prop/speed">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:domain rdf:resource="http://sample/type/Starship"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sample/prop/hasCharacter">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:domain rdf:resource="http://sample/type/Movie"/>
+    <rdfs:range rdf:resource="http://sample/type/Creature"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sample/Chewbacca">
+    <rdf:type rdf:resource="http://sample/type/Wookie"/>
+    <ns1:coPilotOf rdf:resource="http://sample/MillenniumFalcon"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sample/type/Human">
+    <rdfs:subClassOf rdf:resource="http://sample/type/Creature"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sample/MarkHamill">
+    <ns1:age>67</ns1:age>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sample/type/Wookie">
+    <rdfs:subClassOf rdf:resource="http://sample/type/Creature"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sample/type/Starship">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+</rdf:RDF>

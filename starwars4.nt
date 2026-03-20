@@ -1,0 +1,22 @@
+# base RDF data:
+
+<http://sample/Luke> <http://sample/prop/name> "Luke Skywalker" .
+<http://sample/HanSolo> <http://sample/prop/name> "Han Solo" .
+<http://sample/Leia> <http://sample/prop/name> "Leia" .
+<http://sample/Vader> <http://sample/prop/name> "Darth Vader" .
+
+<http://sample/MarkHamill> <http://sample/prop/age> "67" .
+<http://sample/Luke> <http://sample/prop/playedBy> <http://sample/MarkHamill> .
+<http://sample/HanSolo> <http://sample/prop/playedBy> <http://sample/HarrisonFord> .
+<http://sample/Leia> <http://sample/prop/playedBy> <http://sample/CarrieFisher> .
+<http://sample/Vader> <http://sample/prop/playedBy> <http://sample/DavidProwse> .
+
+<http://sample/Luke> <http://sample/prop/hasFriend> <http://sample/HanSolo> .
+<http://sample/Leia> <http://sample/prop/hasFriend> <http://sample/HanSolo> .
+<http://sample/Luke> <http://sample/prop/hasEnemy> <http://sample/Vader> .
+<http://sample/Luke> <http://sample/prop/hasSister> <http://sample/Leia> .
+<http://sample/Leia> <http://sample/prop/hasBrother> <http://sample/Luke> .
+<http://sample/Vader> <http://sample/prop/isFatherOf> <http://sample/Luke> .
+
+
+

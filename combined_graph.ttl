@@ -1,0 +1,67 @@
+@prefix ex: <http://sample/> .
+@prefix ns1: <http://sample/prop/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix type: <http://sample/type/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+type:Creature a rdfs:Class .
+
+type:Movie a rdfs:Class .
+
+type:Starship a rdfs:Class .
+
+ex:Chewbacca a type:Wookie ;
+    ns1:coPilotOf ex:MillenniumFalcon .
+
+ex:SW4 a type:Movie ;
+    ns1:hasCharacter ex:HanSolo,
+        ex:Leia,
+        ex:Luke,
+        ex:Vader .
+
+ex:Yoda a type:Jedi .
+
+ns1:coPilotOf a rdf:Property ;
+    rdfs:domain type:Creature ;
+    rdfs:range type:Starship .
+
+ns1:hasCharacter a rdf:Property ;
+    rdfs:domain type:Movie ;
+    rdfs:range type:Creature .
+
+ns1:speed a rdf:Property ;
+    rdfs:domain type:Starship ;
+    rdfs:range rdfs:Literal .
+
+ex:MarkHamill ns1:age "67" .
+
+ex:MillenniumFalcon a type:Starship ;
+    ns1:speed "1.5"^^xsd:float .
+
+type:Human rdfs:subClassOf type:Creature .
+
+type:Wookie rdfs:subClassOf type:Creature .
+
+ex:Leia ns1:hasBrother ex:Luke ;
+    ns1:hasFriend ex:HanSolo ;
+    ns1:name "Leia" ;
+    ns1:playedBy ex:CarrieFisher .
+
+ex:Vader ns1:isFatherOf ex:Luke ;
+    ns1:name "Darth Vader" ;
+    ns1:playedBy ex:DavidProwse .
+
+type:Jedi rdfs:subClassOf type:Creature .
+
+ex:HanSolo ns1:name "Han Solo" ;
+    ns1:playedBy ex:HarrisonFord .
+
+ex:Luke a type:Human,
+        type:Jedi ;
+    ns1:hasEnemy ex:Vader ;
+    ns1:hasFriend ex:HanSolo ;
+    ns1:hasSister ex:Leia ;
+    ns1:name "Luke Skywalker" ;
+    ns1:playedBy ex:MarkHamill .
+

@@ -1,0 +1,22 @@
+@prefix ns1: <http://sample/prop/> .
+
+<http://sample/Leia> ns1:hasBrother <http://sample/Luke> ;
+    ns1:hasFriend <http://sample/HanSolo> ;
+    ns1:name "Leia" ;
+    ns1:playedBy <http://sample/CarrieFisher> .
+
+<http://sample/MarkHamill> ns1:age "67" .
+
+<http://sample/Vader> ns1:isFatherOf <http://sample/Luke> ;
+    ns1:name "Darth Vader" ;
+    ns1:playedBy <http://sample/DavidProwse> .
+
+<http://sample/HanSolo> ns1:name "Han Solo" ;
+    ns1:playedBy <http://sample/HarrisonFord> .
+
+<http://sample/Luke> ns1:hasEnemy <http://sample/Vader> ;
+    ns1:hasFriend <http://sample/HanSolo> ;
+    ns1:hasSister <http://sample/Leia> ;
+    ns1:name "Luke Skywalker" ;
+    ns1:playedBy <http://sample/MarkHamill> .
+
